@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp.router(
           title: 'Flutter MVVM App Base',
-          theme: appTheme,
+          theme: AppTheme(context: context).getAppTheme(),
           debugShowCheckedModeBanner: false,
           routerDelegate: router.routerDelegate,
           routeInformationParser: router.routeInformationParser,
