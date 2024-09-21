@@ -112,7 +112,7 @@ class LoginView extends ConsumerWidget {
                   hintText: "Email Address",
                   hasFocusBorder: true,
                   controller: vm.emailController,
-                  errorText: loginState.emailError,
+               //   errorText: loginState.emailError,
                   // Pass emailError
                   autofillHints: const [AutofillHints.email],
                   keyboardType: TextInputType.emailAddress,
@@ -129,7 +129,7 @@ class LoginView extends ConsumerWidget {
                   controller: vm.passwordController,
                   autofillHints: const [AutofillHints.password],
                   obscureText: !loginState.isPasswordVisible,
-                  errorText: loginState.passwordError,
+                  //errorText: loginState.passwordError,
                   // Pass passwordError
                   suffixWidget: IconButton(
                     icon: Icon(
