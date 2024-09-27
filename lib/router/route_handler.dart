@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:student_sync/src/auth/view/login_view.dart';
 import 'package:student_sync/src/auth/view/note_view.dart';
+import 'package:student_sync/src/auth/view/reset_pass_view.dart';
 import 'package:student_sync/src/auth/view/signup_view.dart';
 
 // Define your routes in a Router configuration
 final GoRouter router = GoRouter(
-  initialLocation: '/signup',
+  initialLocation: '/resetPass',
   routes: [
     GoRoute(
       path: '/',
@@ -14,6 +15,7 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(path: '/login',builder: (context,state) => const LoginView()),
     GoRoute(path: '/signup',builder: (context,state) => const SignUpView()),
+    GoRoute(path: '/resetPass',builder: (context,state) => const ResetPassView()),
     // Define more routes here as needed
   ],
   errorBuilder: (context, state) {
