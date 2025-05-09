@@ -125,6 +125,7 @@ class LoginView extends ConsumerWidget {
                 child: PrimaryTextField(
                   prefixIcon: Icons.lock_outline_rounded,
                   hintText: "Password",
+
                   hasFocusBorder: true,
                   controller: vm.passwordController,
                   autofillHints: const [AutofillHints.password],

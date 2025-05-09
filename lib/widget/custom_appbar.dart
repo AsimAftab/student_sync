@@ -5,14 +5,14 @@ import 'package:student_sync/extension/theme_extension.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final String subtitle;
+  final String? subtitle; // Make subtitle nullable
   final double height;
 
   // Constructor to accept title, subtitle, and height as parameters
   const CustomAppBar({
     super.key,
     required this.title,
-    required this.subtitle,
+    this.subtitle, // Subtitle is optional
     this.height = 140, // Default height if not provided
   });
 
@@ -41,9 +41,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(height: 8.h),
+                if (subtitle != null && subtitle!.isNotEmpty) // Check if subtitle is not null or empty
+                  SizedBox(height: 8.h),
                 Text(
-                  subtitle,
+                  subtitle!,
                   textAlign: TextAlign.center,
                   style: context.theme.textTheme.titleSmall!.copyWith(
                     color: Colors.white,
