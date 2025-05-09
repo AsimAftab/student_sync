@@ -44,6 +44,7 @@ class PrimaryTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
+          //autofocus: true,
           controller: controller,
           style: TextStyle(
             color: Colors.black,
@@ -97,6 +98,7 @@ class PrimaryTextField extends StatelessWidget {
           ),
           validator: validator,
         ),
+
         if (hasError) // Add space if there's an error message
           SizedBox(height: 8.h),
         if (hasError)
@@ -104,6 +106,7 @@ class PrimaryTextField extends StatelessWidget {
             errorText!,
             style: TextStyle(color: Colors.red, fontSize: 12.sp),
           ),
+
       ],
     );
   }
